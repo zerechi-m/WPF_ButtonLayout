@@ -24,5 +24,17 @@ namespace WPF_ButtonLayout
         {
             InitializeComponent();
         }
+
+        private void RepeatButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.slider1.Value += int.Parse(textBox1.Text);
+        }
+
+        private void RepeatButton_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.slider1.Value -= int.Parse(textBox1.Text);
+        }
+
+
     }
 }

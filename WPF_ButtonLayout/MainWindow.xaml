@@ -39,5 +39,14 @@
                 <TextBlock Foreground="Black" FontSize="20">Stacked Item #5</TextBlock>
             </Border>
         </StackPanel>
+        <StackPanel Grid.Column="2" VerticalAlignment="Center">
+            <TextBox Name="textBox1" Width="50" Margin="10" Text="10" HorizontalAlignment="Center" TextAlignment="Center" InputMethod.IsInputMethodEnabled="False" />
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <RepeatButton Content="増加" Delay="500" Interval="1000" Width="100" Margin="10" Click="RepeatButton_Click" />
+                <RepeatButton Content="減少" Delay="300" Interval="300" Width="100" Margin="10" Click="RepeatButton_Click_1"/>
+            </StackPanel>
+            <Slider Name="slider1" Minimum="0" Maximum="1000" Margin="10, 20" Background="AliceBlue"/>
+            <TextBlock HorizontalAlignment="Center" Text="{Binding Value, ElementName=slider1}" />
+        </StackPanel>
     </Grid>
 </Window>
