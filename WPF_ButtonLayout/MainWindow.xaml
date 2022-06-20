@@ -1,0 +1,43 @@
+﻿<Window x:Class="WPF_ButtonLayout.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_ButtonLayout"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Column="1">
+            <StackPanel Orientation="Horizontal">
+                <Ellipse Fill="red" Stroke="Black" Width="20" Height="20" Margin="0,0,20,0" />
+                <TextBlock Text="Thank You!!" VerticalAlignment="Center" Background="Bisque"/>
+            </StackPanel>
+        </Button>
+        <StackPanel Orientation="Horizontal">
+            <Border Width="50" Background="SkyBlue" BorderBrush="Black" BorderThickness="1">
+                <TextBlock Foreground="Black" FontSize="12">Stacked Item #1</TextBlock>
+            </Border>
+            <Border Width="50" Background="CadetBlue" BorderBrush="Black" BorderThickness="1">
+                <TextBlock Foreground="Black" FontSize="14">Stacked Item #2</TextBlock>
+            </Border>
+            <Border Width="50" Background="LightGoldenRodYellow" BorderBrush="Black" BorderThickness="1">
+                <TextBlock Foreground="Black" FontSize="16">Stacked Item #3</TextBlock>
+            </Border>
+            <Border Width="70" Background="PaleGreen" BorderBrush="Black" BorderThickness="1">
+                <TextBlock Foreground="Black" FontSize="18">Stacked Item #4</TextBlock>
+            </Border>
+            <Border Background="White" BorderBrush="Black" BorderThickness="1">
+                <TextBlock Foreground="Black" FontSize="20">Stacked Item #5</TextBlock>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Window>
