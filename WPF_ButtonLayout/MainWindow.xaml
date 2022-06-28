@@ -48,5 +48,32 @@
             <Slider Name="slider1" Minimum="0" Maximum="1000" Margin="10, 20" Background="AliceBlue"/>
             <TextBlock HorizontalAlignment="Center" Text="{Binding Value, ElementName=slider1}" />
         </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <CheckBox x:Name="checkBox1" Content="CHECK ME!" IsThreeState="True"/>
+            <TextBlock HorizontalAlignment="Center" Margin="10" Text="{Binding IsChecked, ElementName=checkBox1}" />
+            <ToggleButton Content="Toggle Button" IsChecked="{Binding IsChecked, ElementName=checkBox1}" />
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Name="panelRadio">
+            <RadioButton Content="Radio 1-1" Name="radioBtn1" GroupName="radiogroup1"/>
+            <RadioButton Content="Radio 1-2" Name="radioBtn2" GroupName="radiogroup1"/>
+            <Separator Margin="0, 10"/>
+            <RadioButton Content="Radio 1-3" Name="radioBtn3"  />
+            <RadioButton Content="Radio 1-4" Name="radioBtn4" />
+            <RadioButton Content="Radio 1-5" Name="radioBtn5" />
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Name(_N) : " Target="{Binding ElementName=textbox_name}" HorizontalAlignment="Right" />
+                <TextBox x:Name="textbox_name" Width="150" Margin="0,2" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Age(_A) : " Target="{Binding ElementName=textbox_age}" HorizontalAlignment="Right" />
+                <TextBox x:Name="textbox_age" Width="150" Margin="0,2" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Memo(_M)" Target="{Binding ElementName=textbox_memo}" HorizontalAlignment="Right" />
+                <TextBox x:Name="textbox_memo" Width="150" Margin="2,0" />
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>

@@ -35,6 +35,5 @@ namespace WPF_ButtonLayout
             this.slider1.Value -= int.Parse(textBox1.Text);
         }
 
-
     }
 }
